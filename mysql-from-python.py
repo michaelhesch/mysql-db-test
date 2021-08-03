@@ -7,12 +7,12 @@ username = os.getenv('GITPOD_USER_NAME')
 
 # Connect to the database
 connection = pymysql.connect(host='localhost',
-                            user=username,
-                            password='',
-                            db='Chinook')
+                             user=username,
+                             password='',
+                             db='Chinook')
 
 try:
-    # Run a query 
+    # Run a query
     with connection.cursor() as cursor:
         sql = "SELECT * FROM Artist;"
         cursor.execute(sql)
